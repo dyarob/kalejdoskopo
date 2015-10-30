@@ -3,10 +3,10 @@
 
 #include <termios.h>
 
-#define TERMIOSSIZE	sizeof(struct termios)
-
-int		myputc(int c);
 void	terminit(void);
+
+/*internal*/
+int		myputc(int c);
 struct termios *	tattr_get(void);
 char *	termbuf_get(void);
 
