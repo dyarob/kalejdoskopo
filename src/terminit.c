@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <term.h>
-#include "kalejdoskopo.h"
+#include "libkalejdoskopo.h"
 
 void	terminit(void);
 void	termend(void);

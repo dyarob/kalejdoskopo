@@ -1,14 +1,16 @@
 CC          = gcc
-NAME        = libk.a
-SRC         =	\
+NAME        = ./bin/libkalejdoskopo.a
+SRCDIR			= ./src/
+SRCFIL	    =	\
 			terminit.c	\
 			myputc.c	\
 			single_tattr.c	\
 			single_termbuf.c	\
 
+SRC					= $(addprefix $(SRCDIR), $(SRCFIL))
 OBJDIR			= ./obj/
-OBJ         = $(addprefix $(OBJDIR), $(SRC:.c=.o))
-HDFLAGS     = -I.
+OBJ         = $(addprefix $(OBJDIR), $(SRCFIL:.c=.o))
+HDFLAGS     = -I./inc/
 LDFLAGS     = -ltermcap
 CFLAGS      =	$(HDFLAGS) -Wall -Werror -Wextra -ansi -pedantic -g
 RM          = rm -rf
@@ -22,7 +24,7 @@ $(NAME):    $(OBJ)
 			ranlib $@
 			@echo "\033[0m" | tr -d '\n'
 
-$(addprefix $(OBJDIR), %.o):        %.c
+$(addprefix $(OBJDIR), %.o):        $(addprefix $(SRCDIR), %.c)
 			@echo "\033[1;36m[Compiling] \t\033[0m: \033[1;37m" | tr -d '\n'
 			$(CC) $(CFLAGS) -c $< -o $@
 			@echo "\033[0m" | tr -d '\n'

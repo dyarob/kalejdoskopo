@@ -1,4 +1,4 @@
-#include "kalejdoskopo.h"
+#include "libkalejdoskopo.h"
 #include <unistd.h>
 
 int	main(void) {
