@@ -1,2 +1,2 @@
-# ubiquitous-turtle
-ncurses made better. still not sure about the name.
+# libkalejdoskopo
+ncurses made better. Video Games 4 terminals.
