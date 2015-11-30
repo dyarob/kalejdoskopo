@@ -2,6 +2,7 @@ CC          = gcc
 NAME        = ./bin/libkalejdoskopo.a
 SRCDIR			= ./src/
 SRCFIL	    =	\
+			screen.c	\
 			terminit.c	\
 			myputc.c	\
 			single_tattr.c	\
